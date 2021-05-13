@@ -38,14 +38,13 @@ namespace SmallBankApp.Client.Pages.Accounts
 
         protected async Task SaveAccount()
         {
-            _AccountTypes = await _HttpClient.GetFromJsonAsync<List<AccountType>>($"api/Lookups/get-all-account-types");
             await _HttpClient.GetFromJsonAsync<List<AccountType>>($"api/Lookups/get-all-account-types");
             _Currencies = await _HttpClient.GetFromJsonAsync<List<Currency>>($"api/Lookups/get-all-currencies");
         }
 
         protected async Task SaveActionAsync()
         {
-            var response = await _HttpClient.PostAsJsonAsync($"api/Account", _Account);
+            var response = await _HttpClient.PostAsJsonAsync($"api/Accounts", _Account);
             string apiResponse = await response.Content.ReadAsStringAsync();
             if (response.StatusCode != System.Net.HttpStatusCode.OK)
             {

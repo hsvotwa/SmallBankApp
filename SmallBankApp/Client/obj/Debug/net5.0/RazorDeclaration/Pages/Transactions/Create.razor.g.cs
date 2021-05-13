@@ -96,7 +96,8 @@ using Blazored.Toast.Services;
 #line default
 #line hidden
 #nullable disable
-    public partial class Create : Microsoft.AspNetCore.Components.ComponentBase
+    [Microsoft.AspNetCore.Components.RouteAttribute("/CreateTransaction")]
+    public partial class Create : CreateBase
     {
         #pragma warning disable 1998
         protected override void BuildRenderTree(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder __builder)

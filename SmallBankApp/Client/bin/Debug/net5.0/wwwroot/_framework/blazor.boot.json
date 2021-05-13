@@ -245,12 +245,12 @@
       "netstandard.dll": "sha256-P8xX0ad1hKyWWbBxiXl3cYokFlDiuXwp3pqoYatH0kk=",
       "System.Private.CoreLib.dll": "sha256-2km83sNUTrumGJYdDzsN8RnJqv00vKWLCCh0UGajTB4=",
       "SmallBankApp.Shared.dll": "sha256-RZamDS\/ZfABI5PUCXG2DQp7+mcATkUWo8bWQ2AcBpGg=",
-      "SmallBankApp.Client.dll": "sha256-d8yeWZDpsTiT39xkGUj\/ZEvkbjkGarXpWN+HAyXDA\/w="
+      "SmallBankApp.Client.dll": "sha256-qahcjhnd0OODtTVABitnnN3Q5jBo3mFv8Eb65cqLZ38="
     },
     "lazyAssembly": null,
     "pdb": {
       "SmallBankApp.Shared.pdb": "sha256-wXBvpBR9JqlhbgCiDjbQmgO9N6SsdPHBAaYcfrjwawY=",
-      "SmallBankApp.Client.pdb": "sha256-7a+EGVVMNSlgvnLuYDMtlSrouBnc4y2Y6IQRxNfS8I8="
+      "SmallBankApp.Client.pdb": "sha256-kt9SP7SxEC4qG9viz6YWBq9RAbT3eYzIyqZ7ZBO0F8Q="
     },
     "runtime": {
       "dotnet.timezones.blat": "sha256-ibxaSjW7s3aLVssChknhzCpgMTHGu4D48Q9OLP3dfe8=",
