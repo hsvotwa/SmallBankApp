@@ -26,11 +26,9 @@ namespace SmallBankApp.Client.Pages.Accounts
         protected async Task Refresh()
         {
             IsBusy = true;
-            _Accounts = await _httpClient.GetFromJsonAsync<List<Account>>($"api/Accounts/get-accounts");
+            _Accounts = await _httpClient.GetFromJsonAsync<List<Account>>($"api/Accounts/GetAll");
             StateHasChanged();
             IsBusy = false;
         }
-
-
     }
 }

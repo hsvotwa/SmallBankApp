@@ -17,7 +17,7 @@
       "url": "_content\/Blazored.Modal\/blazored.modal.js"
     },
     {
-      "hash": "sha256-Ue\/au+bmg54chDILOgVO18uBCslPZgdkXuOcSvS7Z4Q=",
+      "hash": "sha256-23OJwJ+vFV\/93veNumdiet6Z29YNVouMgP1+MjvBUn0=",
       "url": "_framework\/blazor.boot.json"
     },
     {
@@ -1213,11 +1213,11 @@
       "url": "_framework\/SmallBankApp.Shared.pdb"
     },
     {
-      "hash": "sha256-X3oQL+cv6YH8z7bWXdvTH7hh7HZ+qEVfgaMqZxN4Z\/M=",
+      "hash": "sha256-d8yeWZDpsTiT39xkGUj\/ZEvkbjkGarXpWN+HAyXDA\/w=",
       "url": "_framework\/SmallBankApp.Client.dll"
     },
     {
-      "hash": "sha256-NTyO36txTf8tLERe7J3OzztruoTGeSEDUr1gwge9K0c=",
+      "hash": "sha256-7a+EGVVMNSlgvnLuYDMtlSrouBnc4y2Y6IQRxNfS8I8=",
       "url": "_framework\/SmallBankApp.Client.pdb"
     },
     {
@@ -2485,5 +2485,5 @@
       "url": "SmallBankApp.Client.bundle.scp.css"
     }
   ],
-  "version": "rY6v1M+6"
+  "version": "xCh\/IBLb"
 };

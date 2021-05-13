@@ -1,5 +1,26 @@
-﻿<h3>List</h3>
+﻿@page "/Accounts"
+@inherits ListBase
 
-@code {
+<h3>Accounts List</h3>
 
+@if (_Accounts == null || _Accounts.Count == 0)
+{
+    <p class="text-warning">No data to display</p>
+    return;
 }
+
+<table class="table table-striped">
+    <thead>
+        <tr>Full name</tr>
+        <tr>Account Number</tr>
+        <tr>Sort Code</tr>
+    </thead>
+    <tbody>
+        @foreach (var item in _Accounts)
+        {
+            <tr>@item.FullName</tr>
+            <tr>@item.AccountNumber</tr>
+            <tr>@item.SortCode</tr>
+        }
+    </tbody>
+</table>

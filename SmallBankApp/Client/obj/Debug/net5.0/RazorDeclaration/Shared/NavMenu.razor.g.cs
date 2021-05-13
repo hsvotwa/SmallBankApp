@@ -96,13 +96,6 @@ using Blazored.Toast.Services;
 #line default
 #line hidden
 #nullable disable
-#nullable restore
-#line 1 "C:\Users\lenna\source\repos\SmallBankApp\SmallBankApp\Client\Shared\NavMenu.razor"
-using SmallBankApp.Shared;
-
-#line default
-#line hidden
-#nullable disable
     public partial class NavMenu : Microsoft.AspNetCore.Components.ComponentBase
     {
         #pragma warning disable 1998
@@ -111,7 +104,7 @@ using SmallBankApp.Shared;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 30 "C:\Users\lenna\source\repos\SmallBankApp\SmallBankApp\Client\Shared\NavMenu.razor"
+#line 28 "C:\Users\lenna\source\repos\SmallBankApp\SmallBankApp\Client\Shared\NavMenu.razor"
        
     private bool collapseNavMenu = true;
 
