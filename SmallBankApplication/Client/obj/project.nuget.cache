@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "2OeF+wrapk1X2Xhx7tVDVz9Co70i5a4scADqVCHRLBzlQ/iHfFNNcyQbq3L8RHSi6pYuahsISFePHJdFd30Mvg==",
+  "dgSpecHash": "J0zAPubqtXbZxsSjfgH4wADyv8NOvusJP+OXdx06Nrse4kIv3FhHpXI+eGaeuDPWyI4tyirNyV8aige7NvYAMA==",
   "success": true,
   "projectFilePath": "C:\\Users\\lenna\\source\\repos\\SmallBankApp\\SmallBankApplication\\Client\\SmallBankApplication.Client.csproj",
   "expectedPackageFiles": [
@@ -225,7 +225,7 @@
     "C:\\Users\\lenna\\.nuget\\packages\\system.xml.xmlserializer\\4.3.0\\system.xml.xmlserializer.4.3.0.nupkg.sha512",
     "C:\\Users\\lenna\\.nuget\\packages\\system.xml.xpath\\4.3.0\\system.xml.xpath.4.3.0.nupkg.sha512",
     "C:\\Users\\lenna\\.nuget\\packages\\system.xml.xpath.xdocument\\4.3.0\\system.xml.xpath.xdocument.4.3.0.nupkg.sha512",
-    "C:\\Users\\lenna\\.nuget\\packages\\microsoft.netcore.app.runtime.browser-wasm\\5.0.4\\microsoft.netcore.app.runtime.browser-wasm.5.0.4.nupkg.sha512"
+    "C:\\Users\\lenna\\.nuget\\packages\\microsoft.netcore.app.runtime.browser-wasm\\5.0.6\\microsoft.netcore.app.runtime.browser-wasm.5.0.6.nupkg.sha512"
   ],
   "logs": []
 }

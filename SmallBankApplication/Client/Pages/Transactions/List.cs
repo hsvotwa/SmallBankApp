@@ -1,22 +1,29 @@
 ﻿using Microsoft.AspNetCore.Components;
+using SmallBankApplication.Client.Services;
 using SmallBankApplication.Shared.Models;
+using System;
 using System.Collections.Generic;
-using System.Net.Http;
-using System.Net.Http.Json;
 using System.Threading.Tasks;
 
 namespace SmallBankApplication.Client.Pages.Transactions
 {
     public class ListBase : ComponentBase
     {
-        [Inject]
-        HttpClient _HttpClient { get; set; }
 
         [Inject]
         protected NavigationManager navigationManager { get; set; }
         public bool IsBusy { get; set; }
 
-        protected List<Transaction> _Transactions { get; set; } = new List<Transaction>();
+        protected ICollection<Transaction> _Transactions { get; set; } = new List<Transaction>();
+
+        [Inject]
+        protected ILookupService _LookupService { get; set; }
+
+        [Inject]
+        protected NavigationManager _NavigationManager { get; set; }
+
+        [Inject]
+        protected ITransactionService _TransactionService { get; set; }
 
         protected override async Task OnInitializedAsync()
         {
@@ -26,9 +33,19 @@ namespace SmallBankApplication.Client.Pages.Transactions
         protected async Task Refresh()
         {
             IsBusy = true;
-            _Transactions = await _HttpClient.GetFromJsonAsync<List<Transaction>>($"api/Transactions/GetAll");
+            _Transactions = await _TransactionService.GetAll();
             StateHasChanged();
             IsBusy = false;
+        }
+
+        protected void Create()
+        {
+            _NavigationManager.NavigateTo("/CreateTransaction");
+        }
+
+        protected void EditTransaction(Guid accountId)
+        {
+            _NavigationManager.NavigateTo($"/EditTransaction/{accountId}");
         }
     }
 }

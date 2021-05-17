@@ -31,8 +31,8 @@ namespace SmallBankApplication.Server.Controllers
         [SwaggerResponse(typeof(List<Account>))]
         public async Task<List<Account>> GetAll()
         {
-            var applicationDbContext = _Context.Accounts.Include(a => a.AccountType).Include(a => a.Currency);
-            return await applicationDbContext.ToListAsync();
+            var result = _Context.Accounts.Include(a => a.AccountType).Include(a => a.Currency).AsNoTracking();
+            return await result.ToListAsync();
         }
 
         [HttpGet("Details/{id}")]
@@ -47,6 +47,7 @@ namespace SmallBankApplication.Server.Controllers
             var account = await _Context.Accounts
                 .Include(a => a.AccountType)
                 .Include(a => a.Currency)
+                .AsNoTracking()
                 .FirstOrDefaultAsync(m => m.AccountID == id);
             return account;
         }

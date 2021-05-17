@@ -1,41 +1,51 @@
 ﻿@page "/CreateTransaction"
 @inherits CreateBase
 
-<h3>Create New Account</h3>
+<h3>Create New Transaction</h3>
 <EditForm Model="_Transaction" OnValidSubmit="@(()=>SaveActionAsync())">
     <DataAnnotationsValidator />
+    <ValidationSummary />
 
     <div class="row">
         <div class="form-group col-6">
             <label class="form-label d-block">Source Account</label>
-            <InputSelect id="SourceAccountId" class="form-control" @bind-Value="SourceAccountId" style="width:300px" required>
+            <InputSelect id="SourceAccountId" class="form-control" @bind-Value="SourceAccountId" required @onchange="SetSourceAccount">
                 @foreach (var item in _Accounts)
                 {
-                    <option value="@item.AccountID">@item.AccountNumber</option>
+                    <option value="@item.AccountID">@($"{item.FullName} - {item.AccountNumber} ({item.Currency.Name})")</option>
                 }
             </InputSelect>
+            <ValidationMessage For="() => _Transaction.SourceAccountID" />
         </div>
         <div class="form-group col-6">
             <label class="form-label d-block">Destination Account</label>
-            <InputSelect id="DestinationAccountId" class="form-control" @bind-Value="DestinationAccountId" style="width:300px" required>
+            <InputSelect id="DestinationAccountId" class="form-control" @bind-Value="DestinationAccountId" required @onchange="SetDestinationAccount">
                 @foreach (var item in _Accounts)
                 {
-                    <option value="@item.AccountID">@item.AccountNumber</option>
+                    <option value="@item.AccountID">@($"{item.FullName} - {item.AccountNumber} ({item.Currency.Name})")</option>
                 }
             </InputSelect>
+            <ValidationMessage For="() => _Transaction.DestinationAccountID" />
         </div>
     </div>
 
     <div class="row">
         <div class="form-group col-6">
             <label class="form-label d-block">Amount</label>
-            <InputText @bind-Value="_Transaction.TraceReference" />
+            <InputNumber @bind-Value="_Transaction.Amount" class="form-text form-control" />
+            <ValidationMessage For="() => _Transaction.Amount" />
+        </div>
+
+        <div class="form-group col-6">
+            <label class="form-label d-block">Reference</label>
+            <InputText @bind-Value="_Transaction.TraceReference" class="form-text form-control" />
+            <ValidationMessage For="() => _Transaction.TraceReference" />
         </div>
     </div>
 
-    <div class="row">
-        <button type="button" @onclick="()=>SaveActionAsync()" class="btn global-default-btn mr-1">Save</button>
-        <button class="btn global-cancel-btn" type="button" @onclick="CancelAsync">Close</button>
+    <div class="row col-12">
+        <button type="button" @onclick="()=>SaveActionAsync()" class="btn btn-dark mr-1">Save</button>
+        <button class="btn btn-warning" type="button" @onclick="CancelAsync">Close</button>
     </div>
 
 </EditForm>

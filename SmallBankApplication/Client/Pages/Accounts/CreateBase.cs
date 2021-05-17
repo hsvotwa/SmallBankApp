@@ -1,26 +1,21 @@
 ﻿using Microsoft.AspNetCore.Components;
-using Newtonsoft.Json;
 using SmallBankApplication.Client.Services;
-using SmallBankApplication.Shared.Models;
-using SmallBankApplication.Shared.ViewModels;
-using System;
 using System.Collections.Generic;
-using System.Net.Http;
-using System.Net.Http.Json;
+using System.Linq;
 using System.Threading.Tasks;
 
 namespace SmallBankApplication.Client.Pages.Accounts
 {
     public class CreateBase : ComponentBase
     {
-        [Inject]
-        HttpClient _HttpClient { get; set; }
+        private string accountTypeID;
+        private string currencyID;
 
         [Inject]
         protected NavigationManager _NavigationManager { get; set; }
         public bool IsBusy { get; set; }
-        public string AccountTypeID { get; set; }
-        public string CurrencyID { get; set; }
+        public string AccountTypeID { get => accountTypeID; set { accountTypeID = value; SetAccountType(); } }
+        public string CurrencyID { get => currencyID; set { currencyID = value; SetCurrency(); } }
 
         [Inject]
         protected ILookupService _LookupService { get; set; }
@@ -29,8 +24,8 @@ namespace SmallBankApplication.Client.Pages.Accounts
         protected IAccountService _AccountService { get; set; }
 
         protected NewAccountViewModel _Account { get; set; } = new NewAccountViewModel();
-        protected List<AccountType> _AccountTypes { get; set; } = new List<AccountType>();
-        protected List<Currency> _Currencies { get; set; } = new List<Currency>();
+        protected ICollection<AccountType> _AccountTypes { get; set; } = new List<AccountType>();
+        protected ICollection<Currency> _Currencies { get; set; } = new List<Currency>();
 
         protected override async Task OnInitializedAsync()
         {
@@ -39,8 +34,20 @@ namespace SmallBankApplication.Client.Pages.Accounts
 
         protected async Task GetLookups()
         {
-            _AccountTypes = (List<AccountType>)await _LookupService.GetAllAccountTypes();
-            _Currencies = (List<Currency>)await _LookupService.GetAllCurrencies();
+            _AccountTypes = await _LookupService.GetAllAccountTypes();
+            _Currencies = await _LookupService.GetAllCurrencies();
+            AccountTypeID = _AccountTypes.FirstOrDefault()?.AccountTypeID.ToString();
+            CurrencyID = _Currencies.FirstOrDefault()?.CurrencyID.ToString();
+        }
+
+        protected void SetAccountType()
+        {
+            _Account.AccountTypeID = int.Parse(AccountTypeID);
+        }
+
+        protected void SetCurrency()
+        {
+            _Account.CurrencyID = int.Parse(CurrencyID);
         }
 
         protected async Task SaveActionAsync()
@@ -48,11 +55,9 @@ namespace SmallBankApplication.Client.Pages.Accounts
             var response = await _AccountService.Create(_Account);
             if (response.Success)
             {
-                //
                 StateHasChanged();
                 return;
             }
-
         }
 
         protected void CancelAsync()

@@ -27,8 +27,13 @@ namespace SmallBankApplication.Server.Controllers
         [SwaggerResponse(typeof(List<Transaction>))]
         public async Task<List<Transaction>> GetAll()
         {
-            var applicationDbContext = _Context.Transactions.Include(t => t.DestinationAccount).Include(t => t.SourceAccount);
-            return await applicationDbContext.ToListAsync();
+            var result = _Context.Transactions
+                .Include(t => t.DestinationAccount)
+                .Include(t => t.DestinationAccount.Currency)
+                .Include(t => t.SourceAccount)
+                .Include(t => t.SourceAccount.Currency)
+                .AsNoTracking();
+            return await result.ToListAsync();
         }
 
         [HttpGet("Details/{id}")]
@@ -41,7 +46,10 @@ namespace SmallBankApplication.Server.Controllers
             }
             return await _Context.Transactions
                 .Include(t => t.DestinationAccount)
+                .Include(t => t.DestinationAccount.Currency)
                 .Include(t => t.SourceAccount)
+                .Include(t => t.SourceAccount.Currency)
+                .AsNoTracking()
                 .FirstOrDefaultAsync(m => m.TransactionID == id);
         }
 

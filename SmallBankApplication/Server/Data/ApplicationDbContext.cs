@@ -5,9 +5,7 @@ using Microsoft.Extensions.Options;
 using SmallBankApplication.Server.Models;
 using SmallBankApplication.Shared.Models;
 using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
 
 namespace SmallBankApplication.Server.Data
 {

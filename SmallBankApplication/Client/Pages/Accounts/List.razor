@@ -3,24 +3,39 @@
 
 <h3>Accounts List</h3>
 
+<div class="mt-4 mb-4">
+    <button @onclick="Create" class="btn btn-dark">Create New</button>
+</div>
 @if (_Accounts == null || _Accounts.Count == 0)
 {
+    if (IsBusy)
+    {
+        <p class="text-dark">Loading...</p>
+        return;
+    }
     <p class="text-warning">No data to display</p>
     return;
 }
-
 <table class="table table-striped">
-    <thead>
-        <tr>Full name</tr>
-        <tr>Account Number</tr>
-        <tr>Sort Code</tr>
+    <thead class="thead-dark">
+        <tr>
+            <td>Full Name</td>
+            <td>Account Number</td>
+            <td>Sort Code</td>
+            <td></td>
+        </tr>
     </thead>
     <tbody>
         @foreach (var item in _Accounts)
         {
-            <tr>@item.FullName</tr>
-            <tr>@item.AccountNumber</tr>
-            <tr>@item.SortCode</tr>
+            <tr>
+                <td>@item.FullName</td>
+                <td>@item.AccountNumber</td>
+                <td>@item.SortCode</td>
+                <td>
+                    <button @onclick="@(()=> EditAccount(item.AccountID))" class="btn btn-outline-dark">Edit</button>
+                </td>
+            </tr>
         }
     </tbody>
 </table>

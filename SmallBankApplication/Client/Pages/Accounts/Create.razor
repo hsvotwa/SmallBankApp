@@ -4,42 +4,46 @@
 <h3>Create New Account</h3>
 <EditForm Model="_Account" OnValidSubmit="@(()=>SaveActionAsync())">
     <DataAnnotationsValidator />
+    <ValidationSummary />
 
     <div class="row">
         <div class="form-group col-6">
             <label class="form-label d-block">Account Holder Name</label>
-            <InputText @bind-Value="_Account.FullName" />
+            <InputText @bind-Value="_Account.FullName" class="form-text form-control" />
+            <ValidationMessage For="() => _Account.FullName" />
         </div>
         <div class="form-group col-6">
             <label class="form-label d-block">Account Type</label>
-            <InputSelect id="AccountTypeID" class="form-control" @bind-Value="AccountTypeID" style="width:300px" required>
+            <InputSelect id="AccountTypeID" class="form-control" @bind-Value="AccountTypeID" required @onchange="SetAccountType">
                 @foreach (var item in _AccountTypes)
                 {
                     <option value="@item.AccountTypeID">@item.Name</option>
                 }
             </InputSelect>
+            <ValidationMessage For="() => _Account.AccountTypeID" />
         </div>
     </div>
 
     <div class="row">
         <div class="form-group col-6">
             <label class="form-label d-block">Initial Deposit</label>
-            <InputNumber @bind-Value="_Account.InitialDeposit" />
+            <InputNumber @bind-Value="_Account.InitialDeposit" class="form-text form-control" />
         </div>
         <div class="form-group col-6">
             <label class="form-label d-block">Account Type</label>
-            <InputSelect id="CurrencyID" class="form-control" @bind-Value="CurrencyID" style="width:300px" required>
+            <InputSelect id="CurrencyID" class="form-control" @bind-Value="CurrencyID" required @onchange="SetCurrency">
                 @foreach (var item in _Currencies)
                 {
                     <option value="@item.CurrencyID">@item.Name</option>
                 }
             </InputSelect>
+            <ValidationMessage For="() => _Account.CurrencyID" />
         </div>
     </div>
 
-    <div class="row">
-        <button type="button" @onclick="()=>SaveActionAsync()" class="btn global-default-btn mr-1">Save</button>
-        <button class="btn global-cancel-btn" type="button" @onclick="CancelAsync">Close</button>
+    <div class="row col-12">
+        <button type="button" @onclick="()=>SaveActionAsync()" class="btn btn-dark mr-1">Save</button>
+        <button class="btn btn-warning" type="button" @onclick="CancelAsync">Close</button>
     </div>
 
 </EditForm>

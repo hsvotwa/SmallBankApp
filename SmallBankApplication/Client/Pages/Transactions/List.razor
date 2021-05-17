@@ -3,24 +3,40 @@
 
 <h3>Transactions List</h3>
 
+<div class="mt-4 mb-4">
+    <button @onclick="Create" class="btn btn-dark">Create New</button>
+</div>
+
 @if (_Transactions == null || _Transactions.Count == 0)
 {
+    if (IsBusy)
+    {
+        <p class="text-dark">Loading...</p>
+        return;
+    }
     <p class="text-warning">No data to display</p>
     return;
 }
-
 <table class="table table-striped">
-    <thead>
-        <tr>Source Account</tr>
-        <tr>Destination Account</tr>
-        <tr>Amount</tr>
+    <thead class="thead-dark">
+        <tr>
+            <td>Source Account</td>
+            <td>Destination Account</td>
+            <td>Amount</td>
+            <td></td>
+        </tr>
     </thead>
     <tbody>
         @foreach (var item in _Transactions)
         {
-            <tr>@item.SourceAccount.AccountNumber</tr>
-            <tr>@item.DestinationAccount.AccountNumber</tr>
-            <tr>@item.Amount.ToString("C")</tr>
+            <tr>
+                <td>@($"{item.SourceAccount.FullName} ({item.SourceAccount.AccountNumber})")</td>
+                <td>@($"{item.DestinationAccount.FullName} ({item.DestinationAccount.AccountNumber})")</td>
+                <td>@($"{item.SourceAccount.Currency.Name} {item.Amount.ToString("#,##0.00")}")</td>
+                <td>
+                    <button @onclick="@(()=> EditTransaction(item.TransactionID))" class="btn btn-outline-dark">Edit</button>
+                </td>
+            </tr>
         }
     </tbody>
 </table>
