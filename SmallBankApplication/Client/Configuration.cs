@@ -7,7 +7,7 @@
 		public Configuration()
 		{
             //local
-            BaseUrl = "/";
+            BaseUrl = "https://localhost:44389/";
 
         }
     }

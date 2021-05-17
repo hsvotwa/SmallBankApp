@@ -19,17 +19,17 @@ namespace SmallBankApplication.Server.Services
         {
             try
             {
-                _context.AccountTypes.Update(new AccountType
+                _context.AccountTypes.Add(new AccountType
                 {
                     AccountTypeID = (int)EnumAccountType.Cheque,
                     Name = EnumAccountType.Cheque.ToString()
                 });
-                _context.AccountTypes.Update(new AccountType
+                _context.AccountTypes.Add(new AccountType
                 {
                     AccountTypeID = (int)EnumAccountType.Savings,
                     Name = EnumAccountType.Savings.ToString()
                 });
-                _context.AccountTypes.Update(new AccountType
+                _context.AccountTypes.Add(new AccountType
                 {
                     AccountTypeID = (int)EnumAccountType.Investment,
                     Name = EnumAccountType.Investment.ToString()
@@ -45,17 +45,17 @@ namespace SmallBankApplication.Server.Services
         {
             try
             {
-                _context.Currencies.Update(new Currency
+                _context.Currencies.Add(new Currency
                 {
                     CurrencyID = (int)EnumCurrency.GBP,
                     Name = EnumCurrency.GBP.ToString()
                 });
-                _context.Currencies.Update(new Currency
+                _context.Currencies.Add(new Currency
                 {
                     CurrencyID = (int)EnumCurrency.USD,
                     Name = EnumCurrency.USD.ToString()
                 });
-                _context.Currencies.Update(new Currency
+                _context.Currencies.Add(new Currency
                 {
                     CurrencyID = (int)EnumCurrency.ZAR,
                     Name = EnumCurrency.ZAR.ToString()

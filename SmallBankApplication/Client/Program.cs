@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
+using SmallBankApplication.Client.Services;
 using System;
 using System.Collections.Generic;
 using System.Net.Http;
@@ -21,8 +22,14 @@ namespace SmallBankApplication.Client
             builder.Services.AddHttpClient("SmallBankApplication.ServerAPI", client => client.BaseAddress = new Uri(builder.HostEnvironment.BaseAddress))
                 .AddHttpMessageHandler<BaseAddressAuthorizationMessageHandler>();
 
-            // Supply HttpClient instances that include access tokens when making requests to the server project
+            //Supply HttpClient instances that include access tokens when making requests to the server project
             builder.Services.AddScoped(sp => sp.GetRequiredService<IHttpClientFactory>().CreateClient("SmallBankApplication.ServerAPI"));
+
+            builder.Services.AddScoped<ILookupService, LookupService>();
+            builder.Services.AddScoped<ITransactionService, TransactionService>();
+            builder.Services.AddScoped<IAuthenticationService, AuthenticationService>();
+            builder.Services.AddScoped<IAppUserService, AppUserService>();
+            builder.Services.AddScoped<IAccountService, AccountService>();
 
             builder.Services.AddApiAuthorization();
 

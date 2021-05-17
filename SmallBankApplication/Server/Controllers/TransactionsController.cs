@@ -11,7 +11,7 @@ using NSwag.Annotations;
 
 namespace SmallBankApplication.Server.Controllers
 {
-    [Authorize]
+    //[Authorize]
     [ApiController]
     [Route("[controller]")]
     public class TransactionsController : ControllerBase

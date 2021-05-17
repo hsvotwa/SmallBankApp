@@ -9,7 +9,7 @@ using SmallBankApplication.Shared.Models;
 
 namespace TwinkleAPI.Server.Controllers
 {
-    [Authorize]
+    //[Authorize]
     [ApiController]
     [Route("api/[controller]")]
     public class ApplicationUsersController : ControllerBase

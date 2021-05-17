@@ -9,12 +9,11 @@ using SmallBankApplication.Shared.ViewModels;
 using SmallBankApplication.Shared.Common;
 using SmallBankApplication.Server.Services;
 using SmallBankApplication.Server.Models;
-using Microsoft.AspNetCore.Authorization;
 using NSwag.Annotations;
 
 namespace SmallBankApplication.Server.Controllers
 {
-    [Authorize]
+    //[Authorize]
     [ApiController]
     [Route("[controller]")]
     public class AccountsController : ControllerBase

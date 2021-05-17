@@ -1,0 +1,41 @@
+﻿@page "/CreateTransaction"
+@inherits CreateBase
+
+<h3>Create New Account</h3>
+<EditForm Model="_Transaction" OnValidSubmit="@(()=>SaveActionAsync())">
+    <DataAnnotationsValidator />
+
+    <div class="row">
+        <div class="form-group col-6">
+            <label class="form-label d-block">Source Account</label>
+            <InputSelect id="SourceAccountId" class="form-control" @bind-Value="SourceAccountId" style="width:300px" required>
+                @foreach (var item in _Accounts)
+                {
+                    <option value="@item.AccountID">@item.AccountNumber</option>
+                }
+            </InputSelect>
+        </div>
+        <div class="form-group col-6">
+            <label class="form-label d-block">Destination Account</label>
+            <InputSelect id="DestinationAccountId" class="form-control" @bind-Value="DestinationAccountId" style="width:300px" required>
+                @foreach (var item in _Accounts)
+                {
+                    <option value="@item.AccountID">@item.AccountNumber</option>
+                }
+            </InputSelect>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="form-group col-6">
+            <label class="form-label d-block">Amount</label>
+            <InputText @bind-Value="_Transaction.TraceReference" />
+        </div>
+    </div>
+
+    <div class="row">
+        <button type="button" @onclick="()=>SaveActionAsync()" class="btn global-default-btn mr-1">Save</button>
+        <button class="btn global-cancel-btn" type="button" @onclick="CancelAsync">Close</button>
+    </div>
+
+</EditForm>

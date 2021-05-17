@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31105.61
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmallBankApplication.Server", "SmallBankApplication\Server\SmallBankApplication.Server.csproj", "{CCDF5969-AD2B-46F3-A900-6CC7632295F4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SmallBankApplication.Server", "SmallBankApplication\Server\SmallBankApplication.Server.csproj", "{CCDF5969-AD2B-46F3-A900-6CC7632295F4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmallBankApplication.Client", "SmallBankApplication\Client\SmallBankApplication.Client.csproj", "{515AA6FF-329E-4E9B-ABBC-C8916DB72972}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SmallBankApplication.Client", "SmallBankApplication\Client\SmallBankApplication.Client.csproj", "{515AA6FF-329E-4E9B-ABBC-C8916DB72972}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmallBankApplication.Shared", "SmallBankApplication\Shared\SmallBankApplication.Shared.csproj", "{64F3A486-143D-47E1-90DE-D5719ACF1CB5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SmallBankApplication.Shared", "SmallBankApplication\Shared\SmallBankApplication.Shared.csproj", "{64F3A486-143D-47E1-90DE-D5719ACF1CB5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

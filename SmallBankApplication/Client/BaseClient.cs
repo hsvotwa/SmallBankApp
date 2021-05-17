@@ -33,8 +33,5 @@ namespace SmallBankApplication.Client
             msg.Headers.Authorization = new System.Net.Http.Headers.AuthenticationHeaderValue("Bearer", BearerToken);
             return Task.FromResult(msg);
         }
-
-
-
     }
 }
