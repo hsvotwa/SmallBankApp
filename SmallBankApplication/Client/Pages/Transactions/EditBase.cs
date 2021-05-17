@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Components;
+﻿using Blazorise.Snackbar;
+using Microsoft.AspNetCore.Components;
 using SmallBankApplication.Client.Services;
 using System;
 using System.Collections.Generic;
@@ -10,6 +11,10 @@ namespace SmallBankApplication.Client.Pages.Transactions
     {
         private string sourceAccountId;
         private string destinationAccountId;
+
+        protected Snackbar _Snackbar;
+        protected string _SnackbarMessage { get; set; }
+        protected SnackbarColor _SnackbarColor { get; set; }
 
         [Inject]
         protected NavigationManager _NavigationManager { get; set; }
@@ -50,12 +55,10 @@ namespace SmallBankApplication.Client.Pages.Transactions
             _Transaction.DestinationAccount = null;
             _Transaction.SourceAccount = null;
             var response = await _TransactionService.Edit(_Transaction.TransactionID, _Transaction);
-            if (response.Success)
-            {
-                //
-                StateHasChanged();
-                return;
-            }
+            _SnackbarColor = response.Success ? SnackbarColor.Success : SnackbarColor.Danger;
+            _SnackbarMessage = response.Description;
+            _Snackbar.Show();
+            StateHasChanged();
         }
 
         protected void CancelAsync()

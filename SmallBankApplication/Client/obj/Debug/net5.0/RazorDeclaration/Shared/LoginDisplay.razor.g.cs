@@ -83,6 +83,13 @@ using SmallBankApplication.Client.Shared;
 #line hidden
 #nullable disable
 #nullable restore
+#line 12 "C:\Users\lenna\source\repos\SmallBankApp\SmallBankApplication\Client\_Imports.razor"
+using Blazorise.Snackbar;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
 #line 1 "C:\Users\lenna\source\repos\SmallBankApp\SmallBankApplication\Client\Shared\LoginDisplay.razor"
 using Microsoft.AspNetCore.Components.Authorization;
 

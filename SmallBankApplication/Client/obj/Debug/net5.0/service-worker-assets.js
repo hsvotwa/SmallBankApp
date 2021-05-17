@@ -5,8 +5,28 @@
       "url": "_content\/Microsoft.AspNetCore.Components.WebAssembly.Authentication\/AuthenticationService.js"
     },
     {
-      "hash": "sha256-pCL2J9jINPJQ8UBi1BJq93sW\/EvxIXo8hyrBH4\/Iqy4=",
+      "hash": "sha256-KJ4nX2E3JW6m29kxJoclmbVllARPZrcut6G4Y1esXhA=",
+      "url": "_content\/Blazorise\/blazorise.css"
+    },
+    {
+      "hash": "sha256-5VvtKD+mmkujsZkKQrsJVUM3zzblIy6cExIiEcszNgs=",
+      "url": "_content\/Blazorise\/blazorise.js"
+    },
+    {
+      "hash": "sha256-4wK\/OeA1ZFQKE\/JPFGExUepu7qgk6jpmlSOzXdBFwyY=",
+      "url": "_content\/Blazorise.Snackbar\/blazorise.snackbar.css"
+    },
+    {
+      "hash": "sha256-N1Mw3UmcfOR0l6NoOAt8SF5iPvq1\/IFfgwWvUe43QYA=",
       "url": "_framework\/blazor.boot.json"
+    },
+    {
+      "hash": "sha256-1FbUsCsYOWaS7lBvnmVXn54A2rYS03sMeSWH6CgfBYc=",
+      "url": "_framework\/Blazorise.dll"
+    },
+    {
+      "hash": "sha256-msRu6QDYpRtYH97tQx6HQUCpRpr06qQFMjTgtTYnFy4=",
+      "url": "_framework\/Blazorise.Snackbar.dll"
     },
     {
       "hash": "sha256-Y2IlVPGCtCVesQ9wWBBKZPWL8cKX3SC0xk7hL9rkrY0=",
@@ -1081,16 +1101,24 @@
       "url": "_framework\/SmallBankApplication.Shared.pdb"
     },
     {
-      "hash": "sha256-DzNJAUVEEKseOklns2WdyvtUFvsBqe+byECmqGxWlWk=",
+      "hash": "sha256-d6a8PCfBGoMqAUnNUeDgTNK6w6q1pYK+Kx9W9O7KkEA=",
       "url": "_framework\/SmallBankApplication.Client.dll"
     },
     {
-      "hash": "sha256-miVz0KuR6FG+dvSPFS+rpvgxsP16T5Hpyb5mWSIWXYk=",
+      "hash": "sha256-BOtUg4hGbtvIYnWDZXh8MLk\/4xotTZZqR+iNVF+vFsg=",
       "url": "_framework\/SmallBankApplication.Client.pdb"
     },
     {
       "hash": "sha256-dl8FVRvWOJfOtzIC\/x66QNnBNsT9cAOMrn22GB8fJ8U=",
       "url": "_framework\/blazor.webassembly.js"
+    },
+    {
+      "hash": "sha256-5i1SALxEgaUtdzXWZ8guCAeJgQerPwrmQ3skQMTXTXY=",
+      "url": "_framework\/Blazorise.dll.gz"
+    },
+    {
+      "hash": "sha256-cYvHKkGVSeJxXU3AtDDKq6XWniRaV3Ht4Y+g\/5XGrx0=",
+      "url": "_framework\/Blazorise.Snackbar.dll.gz"
     },
     {
       "hash": "sha256-tnh0oDpbE\/ljv3cXLSCptpKHm+xHAP2UV6Z4bGUUQR0=",
@@ -2217,7 +2245,7 @@
       "url": "icon-512.png"
     },
     {
-      "hash": "sha256-8Nd6Y54g5moell+Ozwx7px9Vm4omd02OvdoH2HDqzdQ=",
+      "hash": "sha256-Rd5CSPDK\/vURLvcZdnmqwiKDgT1qF6tUGOVbuZITVq0=",
       "url": "index.html"
     },
     {
@@ -2233,5 +2261,5 @@
       "url": "SmallBankApplication.Client.bundle.scp.css"
     }
   ],
-  "version": "Rgmh+BJR"
+  "version": "fDQjadA9"
 };

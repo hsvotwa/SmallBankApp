@@ -1,13 +1,8 @@
-﻿using Microsoft.AspNetCore.Components;
-using Newtonsoft.Json;
+﻿using Blazorise.Snackbar;
+using Microsoft.AspNetCore.Components;
 using SmallBankApplication.Client.Services;
-using SmallBankApplication.Shared.Models;
-using SmallBankApplication.Shared.ViewModels;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Net.Http;
-using System.Net.Http.Json;
 using System.Threading.Tasks;
 
 namespace SmallBankApplication.Client.Pages.Transactions
@@ -16,6 +11,10 @@ namespace SmallBankApplication.Client.Pages.Transactions
     {
         private string sourceAccountId;
         private string destinationAccountId;
+
+        protected Snackbar _Snackbar;
+        protected string _SnackbarMessage { get; set; }
+        protected SnackbarColor _SnackbarColor { get; set; }
 
         [Inject]
         protected NavigationManager _NavigationManager { get; set; }
@@ -58,12 +57,10 @@ namespace SmallBankApplication.Client.Pages.Transactions
         protected async Task SaveActionAsync()
         {
             var response = await _TransactionService.Create(_Transaction);
-            if (response.Success)
-            {
-                //
-                StateHasChanged();
-                return;
-            }
+            _SnackbarColor = response.Success ? SnackbarColor.Success : SnackbarColor.Danger;
+            _SnackbarMessage = response.Description;
+            _Snackbar.Show();
+            StateHasChanged();
         }
 
         protected void CancelAsync()

@@ -2,6 +2,13 @@
 @inherits CreateBase
 
 <h3>Create New Transaction</h3>
+
+<Snackbar @ref="_Snackbar" Color="_SnackbarColor">
+    <SnackbarBody>
+        @_SnackbarMessage
+    </SnackbarBody>
+</Snackbar>
+
 <EditForm Model="_Transaction" OnValidSubmit="@(()=>SaveActionAsync())">
     <DataAnnotationsValidator />
     <ValidationSummary />

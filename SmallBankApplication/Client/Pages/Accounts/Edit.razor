@@ -2,6 +2,13 @@
 @inherits EditBase
 
 <h3>Edit Account - @_Account.AccountNumber (@_Account.SortCode)</h3>
+
+<Snackbar @ref="_Snackbar" Color="_SnackbarColor">
+    <SnackbarBody>
+        @_SnackbarMessage
+    </SnackbarBody>
+</Snackbar>
+
 <EditForm Model="_Account" OnValidSubmit="@(()=>SaveActionAsync())">
     <DataAnnotationsValidator />
     <ValidationSummary />

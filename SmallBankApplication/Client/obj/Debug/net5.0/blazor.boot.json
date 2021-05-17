@@ -7,6 +7,8 @@
   "linkerEnabled": false,
   "resources": {
     "assembly": {
+      "Blazorise.dll": "sha256-1FbUsCsYOWaS7lBvnmVXn54A2rYS03sMeSWH6CgfBYc=",
+      "Blazorise.Snackbar.dll": "sha256-msRu6QDYpRtYH97tQx6HQUCpRpr06qQFMjTgtTYnFy4=",
       "Microsoft.AspNetCore.Antiforgery.dll": "sha256-Y2IlVPGCtCVesQ9wWBBKZPWL8cKX3SC0xk7hL9rkrY0=",
       "Microsoft.AspNetCore.Authentication.Abstractions.dll": "sha256-iw51tdKcETC5QqlJLWett1iPlLZgUrRdZfkV7EoaD4k=",
       "Microsoft.AspNetCore.Authentication.Core.dll": "sha256-NP2svkDxlIVJsMiWAmj552NCYo4j7YnOUr2+jkz5+pc=",
@@ -267,12 +269,12 @@
       "netstandard.dll": "sha256-B6gmXEMfYgOuaOR1g1cGHLn2kDlZYAah4K2XNUZbTs4=",
       "System.Private.CoreLib.dll": "sha256-XY0bl1U8F\/iSbQzkmIHM8UtE\/R9VntZoy\/kMbvuMjTA=",
       "SmallBankApplication.Shared.dll": "sha256-lEN5OqlWdTMswlSIqY+qPnn02jywtaQRgDIWOZjqoSI=",
-      "SmallBankApplication.Client.dll": "sha256-DzNJAUVEEKseOklns2WdyvtUFvsBqe+byECmqGxWlWk="
+      "SmallBankApplication.Client.dll": "sha256-d6a8PCfBGoMqAUnNUeDgTNK6w6q1pYK+Kx9W9O7KkEA="
     },
     "lazyAssembly": null,
     "pdb": {
       "SmallBankApplication.Shared.pdb": "sha256-Ntet0t9vx8RgjvopG0NdfbK3W8irduJtr4UK6fQFV2c=",
-      "SmallBankApplication.Client.pdb": "sha256-miVz0KuR6FG+dvSPFS+rpvgxsP16T5Hpyb5mWSIWXYk="
+      "SmallBankApplication.Client.pdb": "sha256-BOtUg4hGbtvIYnWDZXh8MLk\/4xotTZZqR+iNVF+vFsg="
     },
     "runtime": {
       "dotnet.timezones.blat": "sha256-OEDZp6noMH3AdT8qd0zd7ZXzy2CsPQ+CZeQnYmRoVWo=",

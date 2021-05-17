@@ -1,5 +1,7 @@
 ﻿<StaticWebAssets Version="1.0">
   <ContentRoot BasePath="/" Path="C:\Users\lenna\source\repos\SmallBankApp\SmallBankApplication\Client\bin\Debug\net5.0\wwwroot\" />
   <ContentRoot BasePath="/" Path="C:\Users\lenna\source\repos\SmallBankApp\SmallBankApplication\Client\obj\Debug\net5.0\scopedcss\bundle\" />
+  <ContentRoot BasePath="_content/Blazorise" Path="C:\Users\lenna\.nuget\packages\blazorise\0.9.3.6\build\..\staticwebassets\" />
+  <ContentRoot BasePath="_content/Blazorise.Snackbar" Path="C:\Users\lenna\.nuget\packages\blazorise.snackbar\0.9.3.6\build\..\staticwebassets\" />
   <ContentRoot BasePath="_content/Microsoft.AspNetCore.Components.WebAssembly.Authentication" Path="C:\Users\lenna\.nuget\packages\microsoft.aspnetcore.components.webassembly.authentication\5.0.6\build\..\staticwebassets\" />
 </StaticWebAssets>

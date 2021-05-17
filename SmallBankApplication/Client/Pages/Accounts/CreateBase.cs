@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Components;
+﻿using Blazorise.Snackbar;
+using Microsoft.AspNetCore.Components;
 using SmallBankApplication.Client.Services;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,6 +11,10 @@ namespace SmallBankApplication.Client.Pages.Accounts
     {
         private string accountTypeID;
         private string currencyID;
+
+        protected Snackbar _Snackbar;
+        protected string _SnackbarMessage { get; set; }
+        protected SnackbarColor _SnackbarColor { get; set; }
 
         [Inject]
         protected NavigationManager _NavigationManager { get; set; }
@@ -53,11 +58,10 @@ namespace SmallBankApplication.Client.Pages.Accounts
         protected async Task SaveActionAsync()
         {
             var response = await _AccountService.Create(_Account);
-            if (response.Success)
-            {
-                StateHasChanged();
-                return;
-            }
+            _SnackbarColor = response.Success ? SnackbarColor.Success : SnackbarColor.Danger;
+            _SnackbarMessage = response.Description;
+            _Snackbar.Show();
+            StateHasChanged();
         }
 
         protected void CancelAsync()

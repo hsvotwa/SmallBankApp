@@ -1,9 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "J0zAPubqtXbZxsSjfgH4wADyv8NOvusJP+OXdx06Nrse4kIv3FhHpXI+eGaeuDPWyI4tyirNyV8aige7NvYAMA==",
+  "dgSpecHash": "DgxBun6bs5KE9nHWHlgvoP9FygQOpsw0cUSm9POVLDwnfdZx7nucNcF2i5yB98hyx5s7mNLL9EvEYIZqA+E9Yg==",
   "success": true,
   "projectFilePath": "C:\\Users\\lenna\\source\\repos\\SmallBankApp\\SmallBankApplication\\Client\\SmallBankApplication.Client.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\lenna\\.nuget\\packages\\blazorise\\0.9.3.6\\blazorise.0.9.3.6.nupkg.sha512",
+    "C:\\Users\\lenna\\.nuget\\packages\\blazorise.snackbar\\0.9.3.6\\blazorise.snackbar.0.9.3.6.nupkg.sha512",
     "C:\\Users\\lenna\\.nuget\\packages\\microsoft.aspnetcore.antiforgery\\2.2.0\\microsoft.aspnetcore.antiforgery.2.2.0.nupkg.sha512",
     "C:\\Users\\lenna\\.nuget\\packages\\microsoft.aspnetcore.authentication.abstractions\\2.2.0\\microsoft.aspnetcore.authentication.abstractions.2.2.0.nupkg.sha512",
     "C:\\Users\\lenna\\.nuget\\packages\\microsoft.aspnetcore.authentication.core\\2.2.0\\microsoft.aspnetcore.authentication.core.2.2.0.nupkg.sha512",

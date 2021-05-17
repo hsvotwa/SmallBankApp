@@ -15,6 +15,52 @@
           "lib/netstandard2.0/AutoMapper.dll": {}
         }
       },
+      "Blazorise/0.9.3.6": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNetCore.Components": "5.0.0",
+          "Microsoft.AspNetCore.Components.Web": "5.0.0"
+        },
+        "compile": {
+          "lib/net5.0/Blazorise.dll": {}
+        },
+        "runtime": {
+          "lib/net5.0/Blazorise.dll": {}
+        },
+        "contentFiles": {
+          "contentFiles/any/any/_._": {
+            "buildAction": "None",
+            "codeLanguage": "any",
+            "copyToOutput": false
+          }
+        },
+        "build": {
+          "buildTransitive/Blazorise.props": {}
+        },
+        "buildMultiTargeting": {
+          "buildMultiTargeting/Blazorise.props": {}
+        }
+      },
+      "Blazorise.Snackbar/0.9.3.6": {
+        "type": "package",
+        "dependencies": {
+          "Blazorise": "0.9.3.6",
+          "Microsoft.AspNetCore.Components": "5.0.0",
+          "Microsoft.AspNetCore.Components.Web": "5.0.0"
+        },
+        "compile": {
+          "lib/net5.0/Blazorise.Snackbar.dll": {}
+        },
+        "runtime": {
+          "lib/net5.0/Blazorise.Snackbar.dll": {}
+        },
+        "build": {
+          "buildTransitive/Blazorise.Snackbar.props": {}
+        },
+        "buildMultiTargeting": {
+          "buildMultiTargeting/Blazorise.Snackbar.props": {}
+        }
+      },
       "DotLiquid/2.0.385": {
         "type": "package",
         "compile": {
@@ -3437,6 +3483,8 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v5.0",
         "dependencies": {
+          "Blazorise": "0.9.3.6",
+          "Blazorise.Snackbar": "0.9.3.6",
           "Microsoft.AspNetCore.Components.WebAssembly": "5.0.6",
           "Microsoft.AspNetCore.Components.WebAssembly.Authentication": "5.0.6",
           "Microsoft.AspNetCore.Mvc.RazorPages": "2.2.5",
@@ -3481,6 +3529,81 @@
         "lib/net461/AutoMapper.xml",
         "lib/netstandard2.0/AutoMapper.dll",
         "lib/netstandard2.0/AutoMapper.xml"
+      ]
+    },
+    "Blazorise/0.9.3.6": {
+      "sha512": "Vebv8kDHDO3qQQFs6k7Ht7CpYadjdHs7P9tpGRHfdTcm1vpkiPahZxevf/GjffP4IucD+Q5HLwmKvGCOflbrag==",
+      "type": "package",
+      "path": "blazorise/0.9.3.6",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Blazorise.png",
+        "LICENSE.md",
+        "blazorise.0.9.3.6.nupkg.sha512",
+        "blazorise.nuspec",
+        "build/Blazorise.props",
+        "build/Microsoft.AspNetCore.StaticWebAssets.props",
+        "buildMultiTargeting/Blazorise.props",
+        "buildTransitive/Blazorise.props",
+        "content/Resources/Localization/Carousel/de.json",
+        "content/Resources/Localization/Carousel/en.json",
+        "content/Resources/Localization/Carousel/es.json",
+        "content/Resources/Localization/Carousel/fr.json",
+        "content/Resources/Localization/Carousel/hr.json",
+        "content/Resources/Localization/Carousel/it.json",
+        "content/Resources/Localization/Carousel/nl.json",
+        "content/Resources/Localization/Carousel/pt.json",
+        "content/Resources/Localization/FileEdit/de.json",
+        "content/Resources/Localization/FileEdit/en.json",
+        "content/Resources/Localization/FileEdit/es.json",
+        "content/Resources/Localization/FileEdit/fr.json",
+        "content/Resources/Localization/FileEdit/hr.json",
+        "content/Resources/Localization/FileEdit/it.json",
+        "content/Resources/Localization/FileEdit/nl.json",
+        "content/Resources/Localization/FileEdit/pt.json",
+        "content/compilerconfig.json",
+        "contentFiles/any/net5.0/Resources/Localization/Carousel/de.json",
+        "contentFiles/any/net5.0/Resources/Localization/Carousel/en.json",
+        "contentFiles/any/net5.0/Resources/Localization/Carousel/es.json",
+        "contentFiles/any/net5.0/Resources/Localization/Carousel/fr.json",
+        "contentFiles/any/net5.0/Resources/Localization/Carousel/hr.json",
+        "contentFiles/any/net5.0/Resources/Localization/Carousel/it.json",
+        "contentFiles/any/net5.0/Resources/Localization/Carousel/nl.json",
+        "contentFiles/any/net5.0/Resources/Localization/Carousel/pt.json",
+        "contentFiles/any/net5.0/Resources/Localization/FileEdit/de.json",
+        "contentFiles/any/net5.0/Resources/Localization/FileEdit/en.json",
+        "contentFiles/any/net5.0/Resources/Localization/FileEdit/es.json",
+        "contentFiles/any/net5.0/Resources/Localization/FileEdit/fr.json",
+        "contentFiles/any/net5.0/Resources/Localization/FileEdit/hr.json",
+        "contentFiles/any/net5.0/Resources/Localization/FileEdit/it.json",
+        "contentFiles/any/net5.0/Resources/Localization/FileEdit/nl.json",
+        "contentFiles/any/net5.0/Resources/Localization/FileEdit/pt.json",
+        "contentFiles/any/net5.0/compilerconfig.json",
+        "lib/net5.0/Blazorise.dll",
+        "lib/net5.0/Blazorise.xml",
+        "staticwebassets/blazorise.css",
+        "staticwebassets/blazorise.js"
+      ]
+    },
+    "Blazorise.Snackbar/0.9.3.6": {
+      "sha512": "zIYq35t0CohiHWQNY+j2prq14Oqfbqlr1sVRIXtfuK/Id3nkMiIv4T6KCefXMNP6lsf5wanq5UY7zIGFSn5NcA==",
+      "type": "package",
+      "path": "blazorise.snackbar/0.9.3.6",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Blazorise.png",
+        "LICENSE.md",
+        "blazorise.snackbar.0.9.3.6.nupkg.sha512",
+        "blazorise.snackbar.nuspec",
+        "build/Blazorise.Snackbar.props",
+        "build/Microsoft.AspNetCore.StaticWebAssets.props",
+        "buildMultiTargeting/Blazorise.Snackbar.props",
+        "buildTransitive/Blazorise.Snackbar.props",
+        "lib/net5.0/Blazorise.Snackbar.dll",
+        "lib/net5.0/Blazorise.Snackbar.xml",
+        "staticwebassets/blazorise.snackbar.css"
       ]
     },
     "DotLiquid/2.0.385": {

@@ -1,10 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "9H7cFHBclt5+MxRqxHzkpBOsB1UsGcvUQVp6LLCyGHydgn66Oa1FrZgjnVm486VARDiCGBLsf17GcXsvnE3s1g==",
+  "dgSpecHash": "zYonUfVRY2Fg7DhDG+TvLhoQ2ptQ7eg8Pmo9OOVxOBgJQkFG6NDw5uFtuVzjEHzuaJNwBdwM5UPjj5LRrKrDNQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\lenna\\source\\repos\\SmallBankApp\\SmallBankApplication\\Server\\SmallBankApplication.Server.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\lenna\\.nuget\\packages\\automapper\\10.0.0\\automapper.10.0.0.nupkg.sha512",
+    "C:\\Users\\lenna\\.nuget\\packages\\blazorise\\0.9.3.6\\blazorise.0.9.3.6.nupkg.sha512",
+    "C:\\Users\\lenna\\.nuget\\packages\\blazorise.snackbar\\0.9.3.6\\blazorise.snackbar.0.9.3.6.nupkg.sha512",
     "C:\\Users\\lenna\\.nuget\\packages\\dotliquid\\2.0.385\\dotliquid.2.0.385.nupkg.sha512",
     "C:\\Users\\lenna\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\lenna\\.nuget\\packages\\identitymodel\\4.4.0\\identitymodel.4.4.0.nupkg.sha512",

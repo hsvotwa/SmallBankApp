@@ -2,6 +2,13 @@
 @inherits EditBase
 
 <h3>Edit Transaction - @_Transaction.TraceReference</h3>
+
+<Snackbar @ref="_Snackbar" Color="_SnackbarColor">
+    <SnackbarBody>
+        @_SnackbarMessage
+    </SnackbarBody>
+</Snackbar>
+
 <EditForm Model="_Transaction" OnValidSubmit="@(()=>SaveActionAsync())">
     <DataAnnotationsValidator />
     <ValidationSummary />
